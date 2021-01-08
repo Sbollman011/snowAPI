@@ -204,7 +204,7 @@ puppeteer
 });
 
 
-app.listen((process.env.PORT || 5000));
+app.listen((process.env.PORT));
 //app.listen('8080');
 console.log('API is running on http://localhost:5000');
 module.exports = app;
