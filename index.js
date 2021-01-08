@@ -88,8 +88,8 @@ app.get('/baker', function(req, res){
     
            var whiteSnowSeasonAPI = $('#maincontent > section.weather-blocks > div > div:nth-child(2) > div > h2:nth-child(10)')
                                     .text().trim();
-                                    whiteSnowSeasonAPI = whiteSnowSeasonAPI.split('”');
-                                    whiteSnowSeasonAPI = whiteSnowSeasonAPI[0];
+                                    //whiteSnowSeasonAPI = whiteSnowSeasonAPI.split('”');
+                                   // whiteSnowSeasonAPI = whiteSnowSeasonAPI[0];
             
             var json = {
                 whiteSnow24API :whiteSnow24API,
@@ -206,5 +206,5 @@ puppeteer
 
 app.listen((process.env.PORT || 5000));
 //app.listen('8080');
-console.log('API is running on http://localhost:8080');
+console.log('API is running on http://localhost:5000');
 module.exports = app;
