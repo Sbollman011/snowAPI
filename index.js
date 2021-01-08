@@ -203,3 +203,7 @@ puppeteer
   }),20000);
 
 });
+
+app.listen((process.env.PORT));
+console.log('API is running on http://localhost:5000');
+module.exports = app;
