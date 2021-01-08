@@ -147,10 +147,10 @@ puppeteer
 
     res.send(json);
     
-  }
+  })
   .catch(function(err) {
     console.log("Stevens failed");
-  }));
+  });
 
 });
 
