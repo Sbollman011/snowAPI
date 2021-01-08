@@ -106,7 +106,7 @@ app.get('/baker', function(req, res){
 
 });
 
-
+/*
 app.get('/crystal', function(req, res){
     
     const puppeteer = require('puppeteer');
@@ -202,7 +202,7 @@ puppeteer
     console.log("Stevens failed");
   });
 
-});
+});*/
 
 app.listen((process.env.PORT));
 console.log('API is running on http://localhost:5000');
