@@ -115,7 +115,12 @@ app.get('/crystal', function(req, res){
 const url = 'https://www.crystalmountainresort.com/the-mountain/mountain-report-and-webcams#/';
 
 puppeteer
-  .launch()
+  .launch({
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+    ],
+  })
   .then(function(browser) {
     return browser.newPage();
   })
@@ -157,7 +162,12 @@ app.get('/stevens', function(req, res){
 const url = 'https://www.stevenspass.com/the-mountain/mountain-conditions/weather-report.aspx';
 
 puppeteer
-  .launch()
+  .launch({
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+    ],
+  })
   .then(function(browser) {
     return browser.newPage();
   })
@@ -194,7 +204,7 @@ puppeteer
 });
 
 
-app.listen((process.env.PORT || 5000));
-//app.listen('8080');
+//app.listen((process.env.PORT || 5000));
+app.listen('8080');
 console.log('API is running on http://localhost:8080');
 module.exports = app;
