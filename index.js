@@ -108,7 +108,7 @@ app.get('/baker', function(req, res){
 });
 
 
-app.get('/crystal', function(req, res){
+/*app.get('/crystal', function(req, res){
     
     const puppeteer = require('puppeteer');
     const $ = require('cheerio');
@@ -204,7 +204,7 @@ puppeteer
   });
 
 });
-
+*/
 
 app.listen((process.env.PORT));
 //app.listen('8080');
