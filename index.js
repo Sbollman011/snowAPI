@@ -130,7 +130,7 @@ puppeteer
       return page.content();
     });
   })
-  .then(setTimeout(function(html) {
+  .then(function(html) {
    
       var crystalSnowSeasonAPI= ($('#snowbase-cm-imperial:last',html).text());
       var crystalSnow24API = ($('#main-col > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div.col.conditions-block > div > p:nth-child(3) > strong',html).text());
@@ -150,7 +150,7 @@ puppeteer
   }
   .catch(function(err) {
     console.log("Stevens failed");
-  })),20000);
+  }));
 
 });
 
@@ -177,7 +177,7 @@ puppeteer
       return page.content();
     });
   })
-  .then(setTimeout(function(html) {
+  .then(function(html) {
    
       var stevenSnowSeasonAPI= ($('#snow_report_1 > div.snow_report__content.row > ul > li:nth-child(6) > div > h5',html).text());
       stevenSnowSeasonAPI = stevenSnowSeasonAPI.split("in");
@@ -200,7 +200,7 @@ puppeteer
   })
   .catch(function(err) {
     console.log("Stevens failed");
-  }),20000);
+  });
 
 });
 
