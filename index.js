@@ -92,7 +92,6 @@ app.get('/baker', function(req, res){
                                     whiteSnowSeasonAPI = whiteSnowSeasonAPI[1].split('”');
                                     whiteSnowSeasonAPI = whiteSnowSeasonAPI[0];
             
-            
             var json = {
                 whiteSnow24API :whiteSnow24API,
                 whiteSnowSeasonAPI : whiteSnowSeasonAPI
@@ -108,7 +107,7 @@ app.get('/baker', function(req, res){
 });
 
 
-/*app.get('/crystal', function(req, res){
+app.get('/crystal', function(req, res){
     
     const puppeteer = require('puppeteer');
     const $ = require('cheerio');
@@ -131,7 +130,7 @@ puppeteer
       return page.content();
     });
   })
-  .then(function(html) {
+  .then(setTimeout(function(html) {
    
       var crystalSnowSeasonAPI= ($('#snowbase-cm-imperial:last',html).text());
       var crystalSnow24API = ($('#main-col > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div.col.conditions-block > div > p:nth-child(3) > strong',html).text());
@@ -148,10 +147,10 @@ puppeteer
 
     res.send(json);
     
-  })
+  }
   .catch(function(err) {
-    //handle error
-  });
+    console.log("Stevens failed");
+  })),20000);
 
 });
 
@@ -178,7 +177,7 @@ puppeteer
       return page.content();
     });
   })
-  .then(function(html) {
+  .then(setTimeout(function(html) {
    
       var stevenSnowSeasonAPI= ($('#snow_report_1 > div.snow_report__content.row > ul > li:nth-child(6) > div > h5',html).text());
       stevenSnowSeasonAPI = stevenSnowSeasonAPI.split("in");
@@ -200,13 +199,7 @@ puppeteer
     
   })
   .catch(function(err) {
-    //handle error
-  });
+    console.log("Stevens failed");
+  }),20000);
 
 });
-*/
-
-app.listen((process.env.PORT));
-//app.listen('8080');
-console.log('API is running on http://localhost:5000');
-module.exports = app;
