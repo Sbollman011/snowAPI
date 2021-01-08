@@ -88,8 +88,10 @@ app.get('/baker', function(req, res){
     
            var whiteSnowSeasonAPI = $('#maincontent > section.weather-blocks > div > div:nth-child(2) > div > h2:nth-child(10)')
                                     .text().trim();
-                                    //whiteSnowSeasonAPI = whiteSnowSeasonAPI.split('”');
-                                   // whiteSnowSeasonAPI = whiteSnowSeasonAPI[0];
+                                    whiteSnowSeasonAPI = whiteSnowSeasonAPI.split('summit');
+                                    whiteSnowSeasonAPI = whiteSnowSeasonAPI[1].split('”');
+                                    whiteSnowSeasonAPI = whiteSnowSeasonAPI[0];
+            
             
             var json = {
                 whiteSnow24API :whiteSnow24API,
