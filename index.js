@@ -91,6 +91,10 @@ app.get('/baker', function(req, res){
                                     whiteSnowSeasonAPI = whiteSnowSeasonAPI.split('summit');
                                     whiteSnowSeasonAPI = whiteSnowSeasonAPI[1].split('”');
                                     whiteSnowSeasonAPI = whiteSnowSeasonAPI[0];
+                
+                                    if(whiteSnow24API = "Trace"){
+                                        whiteSnow24API = "0";
+                                    }
             
             var json = {
                 whiteSnow24API :whiteSnow24API,
